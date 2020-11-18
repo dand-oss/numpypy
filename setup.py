@@ -203,7 +203,7 @@ def check_submodules():
         if line.startswith('-') or line.startswith('+'):
             raise ValueError('Submodule not clean: %s' % line)
 
-from distutils.command.sdist import sdist
+from setuptools.command.sdist import sdist
 class sdist_checked(sdist):
     """ check submodules on sdist to prevent incomplete tarballs """
     def run(self):
@@ -254,7 +254,7 @@ def setup_package():
         try:
             from setuptools import setup
         except ImportError:
-            from distutils.core import setup
+            from setuptools.core import setup
 
         FULLVERSION, GIT_REVISION = get_version_info()
         metadata['version'] = FULLVERSION

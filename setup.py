@@ -76,7 +76,7 @@ Operating System :: Unix
 Operating System :: MacOS
 """
 
-MAJOR               = 1
+MAJOR               = 2
 MINOR               = 10
 MICRO               = 0
 ISRELEASED          = True

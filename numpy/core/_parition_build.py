@@ -79,7 +79,7 @@ def generate_declarations():
     """
 
     list_declaration_functions = []
-    for _suff, _type in itertools.izip(list_suff, list_type):
+    for _suff, _type in zip(list_suff, list_type):
         list_declaration_functions.append(_function_template.replace("@suff@", _suff).replace("@type@", _type))
     return ''.join(list_declaration_functions)
 
